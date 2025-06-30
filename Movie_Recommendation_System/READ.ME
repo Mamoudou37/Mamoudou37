@@ -1,1 +1,91 @@
+# 🎬 Movie Recommendation System - Part 2
+
+## 📌 Overview
+
+This project focuses on building two robust movie recommendation systems:
+
+- 📊 **Clustering-based Recommendation System** (using Surprise's `CoClustering`)
+- 📚 **Content-based Recommendation System** (using TF-IDF and Cosine Similarity)
+
+The goal is to deliver accurate and personalized movie suggestions to users, enhancing satisfaction and engagement on a streaming platform like Netflix.
+
+---
+
+## 📁 Datasets
+
+We used three publicly available datasets:
+
+1. **ratings.csv**: userId, movieId, rating, timestamp  
+2. **movies.csv**: movieId, title, genres  
+3. **tags.csv**: userId, movieId, tag, timestamp  
+
+---
+
+## 🧠 Project Objectives
+
+- Build recommendation engines using both clustering and content-based approaches.
+- Evaluate models using metrics like **Precision@k**, **Recall@k**, and **F1-score@k**.
+- Optimize hyperparameters using **GridSearchCV**.
+- Compare model performance and interpret recommendations.
+
+---
+
+## 🧮 Modeling Techniques
+
+### 1. Clustering-Based Recommendation System
+
+- Built using the **CoClustering** algorithm from `surprise`.
+- Hyperparameters optimized via `GridSearchCV`.
+- Evaluation metrics: **RMSE**, **Precision@10**, **Recall@10**, and **F1-score@10**.
+
+### 2. Content-Based Recommendation System
+
+- Combined `title`, `genres`, and `tags` to form a unified text field.
+- Used **TF-IDF Vectorizer** with NLTK-based custom tokenization and lemmatization.
+- Applied **Cosine Similarity** to recommend movies with similar content.
+- Created a recommendation function to suggest similar movies for a given title.
+
+---
+
+## 🧪 Evaluation Metrics
+
+- **Precision@k**: Fraction of recommended items that are relevant.
+- **Recall@k**: Fraction of relevant items that are recommended.
+- **F1-score@k**: Harmonic mean of Precision and Recall.
+- **RMSE**: Root Mean Squared Error between actual and predicted ratings.
+
+---
+
+## 📈 Results Summary
+
+| Model                     | Precision@10 | Recall@10 | F1-score@10 | RMSE   |
+|--------------------------|--------------|-----------|-------------|--------|
+| CoClustering (baseline)  | 0.61         | 0.59      | 0.60        | ~0.93  |
+| CoClustering (tuned)     | 0.58         | 0.57      | 0.575       | ~0.91  |
+| Content-based Filtering  | N/A          | N/A       | N/A         | N/A    |
+
+*Note: Content-based filtering outputs were manually validated based on genre similarity.*
+
+---
+
+## 🧰 Technologies Used
+
+- Python
+- pandas, numpy, seaborn, matplotlib
+- scikit-learn, surprise
+- nltk (tokenization, lemmatization, stopword removal)
+
+---
+
+## 🔄 Reproducibility
+
+The entire project was implemented in **Google Colab** for easy environment setup.  
+Make sure to:
+
+1. Upload the `movies.csv`, `ratings.csv`, and `tags.csv` to your Google Drive.
+2. Update the file paths in the notebook.
+3. Install the `surprise` library in Colab with:
+
+```python
+!pip install surprise
 
