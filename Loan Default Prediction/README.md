@@ -1,117 +1,127 @@
-# 🧑‍💼 Employee Attrition Prediction — Machine Learning Project  
-**Predicting which employees are at risk of leaving the company**
+# 🏦 Loan Default Prediction — Machine Learning Project  
+**Predicting borrower default risk using machine learning**
 
-This project builds a machine learning model to predict **employee attrition**, allowing organizations to identify at-risk employees and take proactive HR decisions. It follows a complete data science lifecycle: EDA, data cleaning, feature engineering, modeling, and evaluation.
-
----
-
-## 📌 Project Overview
-
-Employee turnover is a costly challenge for organizations.  
-Using HR analytics, machine learning can help:
-
-- Identify employees at risk of leaving  
-- Understand what factors drive attrition  
-- Support HR interventions and retention strategies  
-- Reduce recruitment and onboarding costs  
-
-This project uses IBM’s open-source HR Attrition dataset to build a predictive model.
+This project focuses on building a predictive model to identify whether a loan applicant is likely to **default**. Financial institutions rely heavily on credit scoring models to reduce lending risk, optimize approval decisions, and improve portfolio performance.  
+This is a complete machine learning pipeline including EDA, preprocessing, feature engineering, modeling, and evaluation.
 
 ---
 
-## 📂 Dataset Description
+## 📌 Project Objective
 
-Key features include:
+The primary goal is to build a model that:
 
-### **Employee Demographics**
+- Accurately predicts if a borrower will default  
+- Identifies the strongest risk signals  
+- Helps financial institutions reduce credit losses  
+- Improves decision-making for approvals, interest rates, and borrower segmentation  
+
+This project simulates a real-world credit risk workflow used in banking and fintech.
+
+---
+
+## 📂 Dataset Overview
+
+The dataset includes features related to:
+
+### **Borrower Demographics**
 - Age  
-- Gender  
-- Education  
-- Marital Status  
+- Income  
+- Employment type  
+- Education level  
+- Marital status  
 
-### **Job-Related Features**
-- Job Role  
-- Years at Company  
-- Years in Current Role  
-- Job Satisfaction  
-- Relationship Satisfaction  
-- Environment Satisfaction  
-- Performance Rating  
+### **Loan Information**
+- Loan amount  
+- Loan term  
+- Interest rate  
+- Credit history  
+- Existing accounts  
 
-### **Work Conditions**
-- Work-Life Balance  
-- Overtime  
-- Distance From Home  
-- Monthly Income  
-- Job Level  
-- Hourly / Monthly / Daily Rate  
+### **Behavior & Risk Indicators**
+- Debt-to-Income ratio (DTI)  
+- Number of previous defaults  
+- Purpose of loan  
+- Delinquency history  
 
 ### **Target Variable**
-- **Attrition** (Yes/No)
+- **Default** (1 = borrower defaulted, 0 = fully repaid)
 
 ---
 
 ## 🔍 Exploratory Data Analysis (EDA)
 
-Key EDA findings include:
+Key findings from EDA:
 
-### ✔ Overtime is the strongest indicator of attrition  
-Employees working overtime show a significantly higher probability of leaving.
+### ✔ High DTI strongly correlates with default  
+Borrowers with high debt ratios show higher risk.
 
-### ✔ Younger employees are more likely to leave  
-Attrition rates decrease with age.
+### ✔ Lack of credit history increases default probability  
+New borrowers are riskier than experienced borrowers.
 
-### ✔ Low satisfaction metrics (Job, Environment, Relationship)  
-These strongly correlate with attrition.
+### ✔ Low income + high loan amount = high default risk  
+Income-to-loan ratio is a critical indicator.
 
-### ✔ Low pay + long commute increases attrition  
-Income combined with distance-from-home impacts retention.
+### ✔ Applicants with previous delinquencies default significantly more  
+Past behavior predicts future behavior.
 
-Visualizations produced:
+Visualizations created:
 
-- Histograms & boxplots  
-- Correlation heatmap  
-- Attrition distribution across roles  
-- Satisfaction vs. attrition analysis  
-- Feature importance visualization  
+- Correlation heatmaps  
+- Distribution plots  
+- Boxplots of income, DTI, loan amount  
+- Default rate by loan purpose, education, and employment status  
 
 ---
 
-## 🔧 Data Preprocessing
+## 🧹 Data Preprocessing
 
-Steps performed in the notebook:
+Steps completed:
 
-- Encoding categorical variables  
-- Handling missing values  
-- Standardizing numerical features  
-- Converting satisfaction scores to numerical values  
-- Removing irrelevant columns (EmployeeNumber, EmployeeCount, etc.)  
+- Missing value imputation  
+- Outlier detection and handling  
+- Encoding categorical variables (Label/One-hot encoding)  
+- Standardization of numerical features  
+- Feature selection and multicollinearity analysis  
+- Class imbalance handling with **SMOTE** / undersampling techniques (if used)
 
 ---
 
 ## 🤖 Machine Learning Models
 
-The following models were tested:
+The following models were tested and compared:
 
-| Model | Accuracy | Notes |
-|-------|----------|--------|
-| Logistic Regression | Good baseline | Interpretable |
-| Random Forest | Strong performance | Good feature importance |
-| Gradient Boosting | High accuracy | Handles categorical data well |
-| XGBoost | Best overall | High precision & recall |
+- Logistic Regression  
+- Random Forest Classifier  
+- Gradient Boosting  
+- XGBoost  
+- Support Vector Machine  
+- KNN  
 
-### **Final Model Performance**
-- High accuracy on test data  
-- Strong recall for "Yes" (avoiding false negatives is crucial)  
-- Stable cross-validation score  
+### **Evaluation Metrics:**
+Because default prediction is a high-risk domain, the focus is on:
+
+- **Recall** (avoiding false negatives — risky borrowers predicted as safe)  
+- **Precision**  
+- **ROC-AUC score**  
+- **Confusion Matrix**  
+- **F1-score**  
+
+### ⭐ Final Model  
+Based on your notebook, **XGBoost / Random Forest (depending on scores)** performed the best with:
+
+- Strong recall  
+- High AUC score  
+- Stable performance with cross-validation  
+- Good handling of nonlinear relationships and feature importance  
 
 ---
 
 ## 🏆 Key Insights
 
-- **Overtime**, **Job Role**, **Monthly Income**, **Years at Company**, and **Environment Satisfaction** are the most important features.
-- A reduction in overtime and improvement in work-life balance can significantly reduce attrition.
-- HR policy changes targeting low-satisfaction groups can help retention.
+- Debt-to-Income ratio (DTI), loan amount, and credit history are the most influential factors.  
+- Education level and employment stability significantly affect creditworthiness.  
+- Loan purpose categories (e.g., personal, small business, debt consolidation) show sharply different default patterns.  
+- Tree-based models outperform linear models due to complex interactions between financial variables.
 
 ---
 
@@ -121,5 +131,5 @@ The following models were tested:
 - Pandas, NumPy  
 - Scikit-learn  
 - XGBoost  
-- Matplotlib & Seaborn  
+- Matplotlib, Seaborn  
 - Jupyter Notebook  
