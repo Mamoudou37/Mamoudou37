@@ -1,0 +1,339 @@
+"""
+Loan Data ETL Pipeline
+----------------------
+Extracts data from CSVs, transforms it with pandas, and loads it into PostgreSQL.
+
+Tables:
+- dim_customers
+- dim_loans
+- fact_payments
+
+Author: Mamoudou Ndao
+"""
+
+import os
+import logging
+from datetime import datetime
+
+import pandas as pd
+from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+
+
+# ------------------------------------------------------------------------------
+# 1. CONFIG & LOGGING
+# ------------------------------------------------------------------------------
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Load environment variables from .env
+load_dotenv(os.path.join(BASE_DIR, ".env"))
+
+DB_USER = os.getenv("DB_USER", "postgres")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "postgres")
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_PORT = os.getenv("DB_PORT", "5432")
+DB_NAME = os.getenv("DB_NAME", "loan_etl_db")
+
+# Paths to raw data
+CUSTOMERS_CSV = os.path.join(BASE_DIR, "data_raw", "customers.csv")
+LOANS_CSV = os.path.join(BASE_DIR, "data_raw", "loans.csv")
+PAYMENTS_CSV = os.path.join(BASE_DIR, "data_raw", "payments.csv")
+
+# Logging configuration
+LOG_DIR = os.path.join(BASE_DIR, "logs")
+os.makedirs(LOG_DIR, exist_ok=True)
+log_file = os.path.join(LOG_DIR, f"etl_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+
+logging.basicConfig(
+    filename=log_file,
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
+)
+logger = logging.getLogger("loan_etl")
+
+# ------------------------------------------------------------------------------
+# 2. DATABASE CONNECTION
+# ------------------------------------------------------------------------------
+
+
+def get_engine():
+    """Create a SQLAlchemy engine for PostgreSQL."""
+    connection_url = (
+        f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}"
+        f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    )
+    logger.info("Creating database engine.")
+    return create_engine(connection_url)
+
+
+# ------------------------------------------------------------------------------
+# 3. EXTRACT
+# ------------------------------------------------------------------------------
+
+
+def extract_csv(path: str) -> pd.DataFrame:
+    """Extracts data from a CSV file into a pandas DataFrame."""
+    logger.info(f"Extracting data from {path}")
+    if not os.path.exists(path):
+        logger.error(f"File not found: {path}")
+        raise FileNotFoundError(f"File not found: {path}")
+    df = pd.read_csv(path)
+    logger.info(f"Loaded {len(df):,} rows from {os.path.basename(path)}")
+    return df
+
+
+def extract_all():
+    """Extract customers, loans, and payments."""
+    customers = extract_csv(CUSTOMERS_CSV)
+    loans = extract_csv(LOANS_CSV)
+    payments = extract_csv(PAYMENTS_CSV)
+    return customers, loans, payments
+
+
+# ------------------------------------------------------------------------------
+# 4. TRANSFORM
+# ------------------------------------------------------------------------------
+
+
+def clean_customers(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Clean and standardize the customers DataFrame.
+    Expected columns (example):
+    - customer_id
+    - first_name
+    - last_name
+    - date_of_birth
+    - income
+    - city
+    - created_at
+    """
+    logger.info("Transforming customers dataframe.")
+
+    # Drop duplicate customer_id
+    df = df.drop_duplicates(subset=["customer_id"])
+
+    # Standardize column names
+    df.columns = [c.strip().lower() for c in df.columns]
+
+    # Convert date_of_birth to datetime
+    if "date_of_birth" in df.columns:
+        df["date_of_birth"] = pd.to_datetime(df["date_of_birth"], errors="coerce")
+
+    # Convert created_at to datetime
+    if "created_at" in df.columns:
+        df["created_at"] = pd.to_datetime(df["created_at"], errors="coerce")
+
+    # Handle missing income
+    if "income" in df.columns:
+        df["income"] = pd.to_numeric(df["income"], errors="coerce")
+        median_income = df["income"].median()
+        df["income"].fillna(median_income, inplace=True)
+
+    # Create full_name
+    if {"first_name", "last_name"}.issubset(df.columns):
+        df["full_name"] = df["first_name"].str.strip() + " " + df["last_name"].str.strip()
+
+    logger.info(f"Customers transformed: {len(df):,} rows.")
+    return df
+
+
+def clean_loans(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Clean and standardize the loans DataFrame.
+    Expected columns (example):
+    - loan_id
+    - customer_id
+    - principal
+    - interest_rate
+    - term_months
+    - start_date
+    - status
+    """
+    logger.info("Transforming loans dataframe.")
+
+    df.columns = [c.strip().lower() for c in df.columns]
+    df = df.drop_duplicates(subset=["loan_id"])
+
+    # Convert numeric fields
+    for col in ["principal", "interest_rate"]:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # Convert term to int
+    if "term_months" in df.columns:
+        df["term_months"] = pd.to_numeric(df["term_months"], errors="coerce")
+
+    # Convert dates
+    if "start_date" in df.columns:
+        df["start_date"] = pd.to_datetime(df["start_date"], errors="coerce")
+
+    # Derived feature: monthly_payment (simple annuity approx)
+    if {"principal", "interest_rate", "term_months"}.issubset(df.columns):
+        monthly_rate = df["interest_rate"] / 12 / 100
+        n = df["term_months"]
+
+        # Avoid division by zero
+        df["monthly_payment"] = df.apply(
+            lambda row: (
+                (row["principal"] * row["interest_rate"] / 12 / 100)
+                / (1 - (1 + row["interest_rate"] / 12 / 100) ** (-row["term_months"]))
+            )
+            if row["interest_rate"] > 0 and row["term_months"] > 0
+            else row["principal"] / row["term_months"]
+            if row["term_months"] > 0
+            else None,
+            axis=1,
+        )
+
+    logger.info(f"Loans transformed: {len(df):,} rows.")
+    return df
+
+
+def clean_payments(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Clean and standardize the payments DataFrame.
+    Expected columns (example):
+    - payment_id
+    - loan_id
+    - payment_date
+    - amount
+    """
+    logger.info("Transforming payments dataframe.")
+
+    df.columns = [c.strip().lower() for c in df.columns]
+    df = df.drop_duplicates(subset=["payment_id"])
+
+    if "payment_date" in df.columns:
+        df["payment_date"] = pd.to_datetime(df["payment_date"], errors="coerce")
+    if "amount" in df.columns:
+        df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
+
+    logger.info(f"Payments transformed: {len(df):,} rows.")
+    return df
+
+
+def build_fact_table(loans: pd.DataFrame, payments: pd.DataFrame) -> pd.DataFrame:
+    """
+    Build a fact table summarizing loan payments.
+    Output example columns:
+    - loan_id
+    - total_paid
+    - last_payment_date
+    - n_payments
+    - principal
+    - interest_rate
+    - term_months
+    - default_flag (example derived)
+    """
+    logger.info("Building fact_payments table.")
+
+    # Aggregate payments by loan
+    payment_agg = (
+        payments.groupby("loan_id")
+        .agg(
+            total_paid=("amount", "sum"),
+            last_payment_date=("payment_date", "max"),
+            n_payments=("payment_id", "count"),
+        )
+        .reset_index()
+    )
+
+    # Join with loans
+    fact = loans.merge(payment_agg, on="loan_id", how="left")
+
+    # Fill missing payment info with 0 / NaT
+    fact["total_paid"] = fact["total_paid"].fillna(0)
+    fact["n_payments"] = fact["n_payments"].fillna(0).astype(int)
+
+    # Derive default flag (very simplified example)
+    # If total_paid < 90% of principal and status == "charged_off" or "default"
+    if {"principal", "total_paid", "status"}.issubset(fact.columns):
+        fact["default_flag"] = ((fact["total_paid"] < 0.9 * fact["principal"]) &
+                                (fact["status"].str.lower().isin(["default", "charged_off"]))).astype(int)
+    else:
+        fact["default_flag"] = None
+
+    logger.info(f"Fact table built: {len(fact):,} rows.")
+    return fact
+
+
+def transform_all(customers, loans, payments):
+    customers_clean = clean_customers(customers)
+    loans_clean = clean_loans(loans)
+    payments_clean = clean_payments(payments)
+    fact_payments = build_fact_table(loans_clean, payments_clean)
+    return customers_clean, loans_clean, payments_clean, fact_payments
+
+
+# ------------------------------------------------------------------------------
+# 5. LOAD
+# ------------------------------------------------------------------------------
+
+
+def create_schema(engine):
+    """
+    Optionally create a schema or basic DDL.
+    For PostgreSQL you can also use a dedicated schema, e.g. 'loan_dw'.
+    """
+    logger.info("Ensuring basic schema exists (if needed).")
+    # Example if you want a schema:
+    # with engine.connect() as conn:
+    #     conn.execute(text("CREATE SCHEMA IF NOT EXISTS loan_dw;"))
+    #     conn.commit()
+
+
+def load_table(df: pd.DataFrame, table_name: str, engine, if_exists: str = "replace"):
+    """
+    Load a DataFrame into a SQL table.
+    """
+    logger.info(f"Loading {len(df):,} rows into table {table_name} (if_exists={if_exists}).")
+    df.to_sql(
+        table_name,
+        engine,
+        index=False,
+        if_exists=if_exists,
+        # schema="loan_dw",  # if you decide to use a schema
+        chunksize=1000,
+        method="multi",
+    )
+    logger.info(f"Table {table_name} loaded successfully.")
+
+
+def load_all(customers, loans, payments, fact_payments, engine):
+    create_schema(engine)
+
+    load_table(customers, "dim_customers", engine)
+    load_table(loans, "dim_loans", engine)
+    load_table(payments, "stg_payments", engine)  # raw/staging
+    load_table(fact_payments, "fact_payments", engine)
+
+
+# ------------------------------------------------------------------------------
+# 6. MAIN ORCHESTRATION
+# ------------------------------------------------------------------------------
+
+
+def run_etl():
+    logger.info("Starting ETL pipeline.")
+    try:
+        # Extract
+        customers_raw, loans_raw, payments_raw = extract_all()
+
+        # Transform
+        customers_clean, loans_clean, payments_clean, fact_payments = transform_all(
+            customers_raw, loans_raw, payments_raw
+        )
+
+        # Load
+        engine = get_engine()
+        load_all(customers_clean, loans_clean, payments_clean, fact_payments, engine)
+
+        logger.info("ETL pipeline completed successfully.")
+    except Exception as e:
+        logger.exception(f"ETL pipeline failed: {e}")
+        raise
+
+
+if __name__ == "__main__":
+    run_etl()
