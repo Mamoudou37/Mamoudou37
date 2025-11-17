@@ -1,13 +1,125 @@
-# Loan default prediction
-The loan approval process is a major concern for banks. Banks put effort into checking creditworthiness to avoid bad debts, but the process is prone to misjudgments. With data science and machine learning, the focus has shifted to building machines that make the approval process bias-free and efficient. The goal of the project is to build a model that predicts loan defaults and advises banks on key variables to consider.
+# 🧑‍💼 Employee Attrition Prediction — Machine Learning Project  
+**Predicting which employees are at risk of leaving the company**
 
-## Skills & Tools Covered
-- Logistic Regression
-- Decision Trees
-- Random Forest
-- Hyperparameter Tuning
-- Exploratory Data Analysis
+This project builds a machine learning model to predict **employee attrition**, allowing organizations to identify at-risk employees and take proactive HR decisions. It follows a complete data science lifecycle: EDA, data cleaning, feature engineering, modeling, and evaluation.
 
-## My Learnings
-The Random Forest model with hyperparameter tuning is proposed to predict loan defaults. The use of techniques such as class weights and GridSearchCV have led to improved performance, better accuracy and recall of ~87% and ~78% respectively, compared to other models, providing a more accurate prediction of defaulted loans. However, the model's limitations such as missing data and outliers must be considered in the loan approval process, particularly the Debt-to-Income Ratio variable.
+---
 
+## 📌 Project Overview
+
+Employee turnover is a costly challenge for organizations.  
+Using HR analytics, machine learning can help:
+
+- Identify employees at risk of leaving  
+- Understand what factors drive attrition  
+- Support HR interventions and retention strategies  
+- Reduce recruitment and onboarding costs  
+
+This project uses IBM’s open-source HR Attrition dataset to build a predictive model.
+
+---
+
+## 📂 Dataset Description
+
+Key features include:
+
+### **Employee Demographics**
+- Age  
+- Gender  
+- Education  
+- Marital Status  
+
+### **Job-Related Features**
+- Job Role  
+- Years at Company  
+- Years in Current Role  
+- Job Satisfaction  
+- Relationship Satisfaction  
+- Environment Satisfaction  
+- Performance Rating  
+
+### **Work Conditions**
+- Work-Life Balance  
+- Overtime  
+- Distance From Home  
+- Monthly Income  
+- Job Level  
+- Hourly / Monthly / Daily Rate  
+
+### **Target Variable**
+- **Attrition** (Yes/No)
+
+---
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+Key EDA findings include:
+
+### ✔ Overtime is the strongest indicator of attrition  
+Employees working overtime show a significantly higher probability of leaving.
+
+### ✔ Younger employees are more likely to leave  
+Attrition rates decrease with age.
+
+### ✔ Low satisfaction metrics (Job, Environment, Relationship)  
+These strongly correlate with attrition.
+
+### ✔ Low pay + long commute increases attrition  
+Income combined with distance-from-home impacts retention.
+
+Visualizations produced:
+
+- Histograms & boxplots  
+- Correlation heatmap  
+- Attrition distribution across roles  
+- Satisfaction vs. attrition analysis  
+- Feature importance visualization  
+
+---
+
+## 🔧 Data Preprocessing
+
+Steps performed in the notebook:
+
+- Encoding categorical variables  
+- Handling missing values  
+- Standardizing numerical features  
+- Converting satisfaction scores to numerical values  
+- Removing irrelevant columns (EmployeeNumber, EmployeeCount, etc.)  
+
+---
+
+## 🤖 Machine Learning Models
+
+The following models were tested:
+
+| Model | Accuracy | Notes |
+|-------|----------|--------|
+| Logistic Regression | Good baseline | Interpretable |
+| Random Forest | Strong performance | Good feature importance |
+| Gradient Boosting | High accuracy | Handles categorical data well |
+| XGBoost | Best overall | High precision & recall |
+
+### **Final Model Performance**
+- High accuracy on test data  
+- Strong recall for "Yes" (avoiding false negatives is crucial)  
+- Stable cross-validation score  
+
+---
+
+## 🏆 Key Insights
+
+- **Overtime**, **Job Role**, **Monthly Income**, **Years at Company**, and **Environment Satisfaction** are the most important features.
+- A reduction in overtime and improvement in work-life balance can significantly reduce attrition.
+- HR policy changes targeting low-satisfaction groups can help retention.
+
+---
+
+## 🛠 Technologies Used
+
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- XGBoost  
+- Matplotlib & Seaborn  
+- Jupyter Notebook  
