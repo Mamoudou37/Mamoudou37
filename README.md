@@ -17,20 +17,87 @@ I specialize in building end-to-end machine learning solutions and data pipeline
 
 ## 🛠️ Technical Stack
 
-**Languages & Analytics**  
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) ![R](https://img.shields.io/badge/-R-276DC3?style=flat&logo=r&logoColor=white) ![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat&logo=postgresql&logoColor=white) ![SAS](https://img.shields.io/badge/-SAS-1F4E79?style=flat)
+### **Languages & Analytics**
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/-R-276DC3?style=flat&logo=r&logoColor=white)
+![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
+![SAS](https://img.shields.io/badge/-SAS-1F4E79?style=flat)
+![VBA](https://img.shields.io/badge/-VBA-217346?style=flat&logo=microsoft-excel&logoColor=white)
+![Shell](https://img.shields.io/badge/-Bash_Shell-4EAA25?style=flat&logo=gnubash&logoColor=white)
 
-**Machine Learning & AI**  
-Scikit-learn • XGBoost • TensorFlow • PyTorch • NLP • Regression Models • Random Forests • Decision Trees
+Python (Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, PyTorch) •  
+R • SAS • VBA • Bash / Shell scripting
 
-**Data Engineering & Cloud**  
-AWS • Azure • PostgreSQL • MongoDB • Snowflake • Apache Spark • Airflow • Kafka • ETL Pipelines
+---
 
-**Visualization & BI**  
-Tableau • Power BI • Matplotlib • Seaborn • Looker Studio • IBM Cognos Analytics
+### **Machine Learning & AI**
+![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/-Scikit--Learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/-XGBoost-FF6600?style=flat)
 
-**Development Tools**  
-Git/GitHub • CI/CD • Docker • Jupyter • VS Code
+Regression • Classification • Ensemble Models  
+Decision Trees • Random Forests • Gradient Boosting • XGBoost  
+Deep Learning (TensorFlow, PyTorch) • NLP • Feature Engineering  
+Model Evaluation & Optimization
+
+---
+
+### **Data Engineering & Data Processing**
+![Spark](https://img.shields.io/badge/-Apache_Spark-E25A1C?style=flat&logo=apachespark&logoColor=white)
+![Hadoop](https://img.shields.io/badge/-Hadoop-66CCFF?style=flat&logo=apachehadoop&logoColor=white)
+![Airflow](https://img.shields.io/badge/-Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white)
+![Kafka](https://img.shields.io/badge/-Kafka-231F20?style=flat&logo=apachekafka&logoColor=white)
+![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?style=flat&logo=snowflake&logoColor=white)
+
+ETL Pipelines • Data Modeling • Pipeline Automation  
+Apache Spark • Hadoop • Apache Airflow • Kafka  
+Snowflake • Large-scale Data Processing
+
+---
+
+### **Databases**
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white)
+![Cassandra](https://img.shields.io/badge/-Cassandra-1287B1?style=flat&logo=apachecassandra&logoColor=white)
+![IBM DB2](https://img.shields.io/badge/-IBM_DB2-0530AD?style=flat&logo=ibm&logoColor=white)
+
+PostgreSQL • MySQL • MongoDB • Cassandra • IBM DB2
+
+---
+
+### **Cloud Platforms**
+![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white)
+![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat&logo=microsoft-azure&logoColor=white)
+
+AWS • Azure • Cloud Data Pipelines • Cloud Storage • Cloud-Based Modeling
+
+---
+
+### **Visualization & BI**
+![Power BI](https://img.shields.io/badge/-PowerBI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=flat&logo=tableau&logoColor=white)
+![Looker](https://img.shields.io/badge/-Looker-4285F4?style=flat&logo=looker&logoColor=white)
+![Cognos](https://img.shields.io/badge/-IBM_Cognos-054ADA?style=flat&logo=ibm&logoColor=white)
+![Seaborn](https://img.shields.io/badge/-Seaborn-0099CC?style=flat)
+![Matplotlib](https://img.shields.io/badge/-Matplotlib-003060?style=flat)
+
+Power BI • Tableau • Looker Studio • IBM Cognos Analytics  
+Matplotlib • Seaborn • Dashboarding • KPI Development
+
+---
+
+### **Development Tools & Practices**
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![VS Code](https://img.shields.io/badge/-VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
+![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+
+Git / GitHub • CI/CD • Docker • Jupyter Notebook • VS Code  
+Version Control • Reproducible Pipelines • Software Best Practices
+
 
 ---
 
