@@ -36,7 +36,7 @@ Git/GitHub • CI/CD • Docker • Jupyter • VS Code
 
 ## 📂 Featured Projects
 
-### 🏪 [BigMart Sales Prediction](https://github.com/yourusername/bigmart-sales-prediction)
+### 🏪 [BigMart Sales Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/BigMart%20Sale%20Prediction)
 **End-to-end ML pipeline predicting retail sales across multiple outlets**
 
 Built a complete machine learning solution from data cleaning to deployment, helping retail businesses optimize inventory and reduce stockouts.
@@ -47,7 +47,7 @@ Built a complete machine learning solution from data cleaning to deployment, hel
 
 ---
 
-### 👔 [Employee Attrition Prediction](https://github.com/yourusername/employee-attrition)
+### 👔 [Employee Attrition Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Employee%20Attrition%20Prediction)
 **HR analytics model predicting employee turnover risk**
 
 Developed a predictive system to identify at-risk employees, enabling proactive retention strategies for healthcare organizations.
@@ -58,7 +58,7 @@ Developed a predictive system to identify at-risk employees, enabling proactive 
 
 ---
 
-### 🏦 [Loan Default Prediction](https://github.com/yourusername/loan-default-prediction)
+### 🏦 [Loan Default Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Loan%20Default%20Prediction)
 **Credit risk model for identifying high-risk borrowers**
 
 Built a classification model simulating real-world credit scoring systems to reduce lending risk and improve approval decisions.
@@ -69,7 +69,7 @@ Built a classification model simulating real-world credit scoring systems to red
 
 ---
 
-### 🔄 [Loan Data ETL Pipeline](https://github.com/yourusername/loan-etl-pipeline)
+### 🔄 [Loan Data ETL Pipeline](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Loan%20Data%20ETL%20Pipeline)
 **Production-ready data engineering solution with PostgreSQL**
 
 Designed a modular ETL pipeline extracting, transforming, and loading loan data into a star-schema data warehouse for analytics.
