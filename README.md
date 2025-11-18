@@ -1,6 +1,6 @@
-# Hi, I'm Mamoudou Ndao 👋
+![](https://github.com/Mamoudou37/Data-Science-Portfolio/blob/main/Black%20and%20Blue%20Futuristic%20Data%20Analyst%20LinkedIn%20Banner.png)
 
-### Data Scientist | 5+ Years Experience | Driving Business Impact Through Advanced Analytics
+# Hi, I'm Mamoudou Ndao 👋
 
 Welcome to my GitHub portfolio! I'm a bilingual data scientist passionate about transforming complex data into actionable insights that drive operational excellence and strategic decision-making.
 
@@ -8,12 +8,8 @@ Welcome to my GitHub portfolio! I'm a bilingual data scientist passionate about 
 
 ## 🎯 About Me
 
-I specialize in building end-to-end machine learning solutions and data pipelines for **healthcare**, **government**, and **manufacturing** sectors. With a Master's in Applied Finance, a Master's in Economics, and an MIT Applied Data Science Certificate, I bring both technical depth and business acumen to every project.
+I specialize in building end-to-end machine learning solutions and data pipelines. With a Master's in Applied Finance, a Master's in Economics, and an MIT Applied Data Science Certificate, I bring both technical depth and business acumen to every project.
 
-**Currently:** Financial Lead & Data Analyst at Entité 3, Toronto, where I've:
-- Structured data collection frameworks for 60+ healthcare service providers
-- Built optimization models for Francophone healthcare services across the GTA
-- Delivered $30K+ in annual savings through data-driven internal audits
 
 **What drives me:** Leveraging data science to improve public services, optimize operations, and create measurable social impact.
 
