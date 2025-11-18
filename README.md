@@ -1,4 +1,4 @@
-![](https://github.com/Mamoudou37/Data-Science-Portfolio/blob/main/Black%20and%20Blue%20Futuristic%20Data%20Analyst%20LinkedIn%20Banner.png)
+![](https://github.com/Mamoudou37/Data-Science-Portfolio/blob/main/Black%20and%20Blue%20Futuristic%20Data%20Analyst%20LinkedIn%20Banner%20(1).png)
 
 # Hi, I'm Mamoudou Ndao 👋
 
