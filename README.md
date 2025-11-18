@@ -1,12 +1,12 @@
 ![](https://github.com/Mamoudou37/Data-Science-Portfolio/blob/main/Black%20and%20Blue%20Futuristic%20Data%20Analyst%20LinkedIn%20Banner%20(1).png)
 
-# Hi, I'm Mamoudou Ndao 👋
+# Hi, I'm Mamoudou Ndao
 
 Welcome to my GitHub portfolio! I'm a bilingual data scientist passionate about transforming complex data into actionable insights that drive operational excellence and strategic decision-making.
 
 ---
 
-## 🎯 About Me
+## About Me
 
 I specialize in building end-to-end machine learning solutions and data pipelines. With a Master's in Applied Finance, a Master's in Economics, and an MIT Applied Data Science Certificate, I bring both technical depth and business acumen to every project.
 
@@ -15,7 +15,7 @@ I specialize in building end-to-end machine learning solutions and data pipeline
 
 ---
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 ### **Languages & Analytics**
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -101,9 +101,9 @@ Version Control • Reproducible Pipelines • Software Best Practices
 
 ---
 
-## 📂 Featured Projects
+## Featured Projects
 
-### 🏪 [BigMart Sales Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/BigMart%20Sale%20Prediction)
+### [BigMart Sales Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/BigMart%20Sale%20Prediction)
 **End-to-end ML pipeline predicting retail sales across multiple outlets**
 
 Built a complete machine learning solution from data cleaning to deployment, helping retail businesses optimize inventory and reduce stockouts.
@@ -114,18 +114,18 @@ Built a complete machine learning solution from data cleaning to deployment, hel
 
 ---
 
-### 👔 [Employee Attrition Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Employee%20Attrition%20Prediction)
+### [Employee Attrition Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Employee%20Attrition%20Prediction)
 **HR analytics model predicting employee turnover risk**
 
 Developed a predictive system to identify at-risk employees, enabling proactive retention strategies for healthcare organizations.
 
 - **Tech Stack:** Python, XGBoost, Random Forest, Scikit-learn, SMOTE
 - **Key Findings:** Overtime work and low satisfaction are strongest attrition indicators
-- **Business Impact:** Provided HR teams with data-driven retention strategies, potentially saving recruitment costs
+- **Business Impact:** Provided HR teams with data-driven retention strategies
 
 ---
 
-### 🏦 [Loan Default Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Loan%20Default%20Prediction)
+### [Loan Default Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Loan%20Default%20Prediction)
 **Credit risk model for identifying high-risk borrowers**
 
 Built a classification model simulating real-world credit scoring systems to reduce lending risk and improve approval decisions.
@@ -136,7 +136,7 @@ Built a classification model simulating real-world credit scoring systems to red
 
 ---
 
-### 🔄 [Loan Data ETL Pipeline](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Loan%20Data%20ETL%20Pipeline)
+### [Loan Data ETL Pipeline](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/Loan%20Data%20ETL%20Pipeline)
 **Production-ready data engineering solution with PostgreSQL**
 
 Designed a modular ETL pipeline extracting, transforming, and loading loan data into a star-schema data warehouse for analytics.
@@ -147,17 +147,17 @@ Designed a modular ETL pipeline extracting, transforming, and loading loan data 
 
 ---
 
-## 📊 What I Bring to Data Science Teams
+## What I Bring to Data Science Teams
 
 ✅ **5+ years** of hands-on experience in healthcare, government, and operations analytics  
 ✅ **End-to-end project ownership** from problem definition to model deployment  
 ✅ **Cross-functional collaboration** with technical and non-technical stakeholders  
 ✅ **Proven business impact** through cost savings, process optimization, and predictive modeling  
-✅ **Bilingual communication** (English & French) for diverse team environments  
+✅ **Bilingual communication** (English & French)   
 
 ---
 
-## 🎓 Education & Certifications
+## Education & Certifications
 
 - **MIT Applied Data Science Program** (2022) - MIT Professional Education
 - **Master's in Applied Finance** (2016) - École de gestion (ESG-UQAM), Montréal
@@ -168,7 +168,7 @@ Designed a modular ETL pipeline extracting, transforming, and loading loan data 
 
 ---
 
-## 📫 Let's Connect
+## Let's Connect
 
 I'm actively seeking data science opportunities in **healthcare**, **government**, and **manufacturing** sectors where I can apply my skills to drive meaningful impact.
 
