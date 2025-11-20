@@ -1,4 +1,4 @@
-# 🏦 Loan Default Prediction — Machine Learning Project  
+# Loan Default Prediction — Machine Learning Project  
 **Predicting borrower default risk using machine learning**
 
 This project focuses on building a predictive model to identify whether a loan applicant is likely to **default**. Financial institutions rely heavily on credit scoring models to reduce lending risk, optimize approval decisions, and improve portfolio performance.  
@@ -6,7 +6,7 @@ This is a complete machine learning pipeline including EDA, preprocessing, featu
 
 ---
 
-## 📌 Project Objective
+## Project Objective
 
 The primary goal is to build a model that:
 
@@ -19,7 +19,7 @@ This project simulates a real-world credit risk workflow used in banking and fin
 
 ---
 
-## 📂 Dataset Overview
+## Dataset Overview
 
 The dataset includes features related to:
 
@@ -48,7 +48,7 @@ The dataset includes features related to:
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 Key findings from EDA:
 
@@ -73,7 +73,7 @@ Visualizations created:
 
 ---
 
-## 🧹 Data Preprocessing
+## Data Preprocessing
 
 Steps completed:
 
@@ -86,7 +86,7 @@ Steps completed:
 
 ---
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 The following models were tested and compared:
 
@@ -106,7 +106,7 @@ Because default prediction is a high-risk domain, the focus is on:
 - **Confusion Matrix**  
 - **F1-score**  
 
-### ⭐ Final Model  
+### Final Model  
 Based on your notebook, **XGBoost / Random Forest (depending on scores)** performed the best with:
 
 - Strong recall  
@@ -116,7 +116,7 @@ Based on your notebook, **XGBoost / Random Forest (depending on scores)** perfor
 
 ---
 
-## 🏆 Key Insights
+## Key Insights
 
 - Debt-to-Income ratio (DTI), loan amount, and credit history are the most influential factors.  
 - Education level and employment stability significantly affect creditworthiness.  
@@ -125,7 +125,7 @@ Based on your notebook, **XGBoost / Random Forest (depending on scores)** perfor
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Python  
 - Pandas, NumPy  
