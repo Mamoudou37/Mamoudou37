@@ -175,10 +175,8 @@ I'm actively seeking data science opportunities in **healthcare**, **government*
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mamoudou-ndao)
 [![Email](https://img.shields.io/badge/-Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:ndao.mamoud@gmail.com)
 
-📍 **Location:** Mississauga, ON  
-📧 **Email:** ndao.mamoud@gmail.com  
-📱 **Phone:** (674) 772-4018
+
 
 ---
 
-⭐️ *"Transforming data into decisions, insights into impact."*
+## *"Transforming data into decisions, insights into impact."*
