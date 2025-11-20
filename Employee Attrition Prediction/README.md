@@ -1,11 +1,11 @@
-# 🧑‍💼 Employee Attrition Prediction — Machine Learning Project  
+# Employee Attrition Prediction — Machine Learning Project  
 **Predicting which employees are at risk of leaving the company**
 
 This project builds a machine learning model to predict **employee attrition**, allowing organizations to identify at-risk employees and take proactive HR decisions. It follows a complete data science lifecycle: EDA, data cleaning, feature engineering, modeling, and evaluation.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Employee turnover is a costly challenge for organizations.  
 Using HR analytics, machine learning can help:
@@ -19,7 +19,7 @@ This project uses IBM’s open-source HR Attrition dataset to build a predictive
 
 ---
 
-## 📂 Dataset Description
+## Dataset Description
 
 Key features include:
 
@@ -51,7 +51,7 @@ Key features include:
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 Key EDA findings include:
 
@@ -77,7 +77,7 @@ Visualizations produced:
 
 ---
 
-## 🔧 Data Preprocessing
+## Data Preprocessing
 
 Steps performed in the notebook:
 
@@ -89,7 +89,7 @@ Steps performed in the notebook:
 
 ---
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 The following models were tested:
 
@@ -107,7 +107,7 @@ The following models were tested:
 
 ---
 
-## 🏆 Key Insights
+## Key Insights
 
 - **Overtime**, **Job Role**, **Monthly Income**, **Years at Company**, and **Environment Satisfaction** are the most important features.
 - A reduction in overtime and improvement in work-life balance can significantly reduce attrition.
@@ -115,7 +115,7 @@ The following models were tested:
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Python  
 - Pandas, NumPy  
