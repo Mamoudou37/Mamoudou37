@@ -1,10 +1,10 @@
-🚀 Featured Project: Loan Data ETL Pipeline
+## Featured Project: Loan Data ETL Pipeline
 
 This project demonstrates a full Extract–Transform–Load (ETL) workflow built in Python, using pandas for data cleaning and PostgreSQL as the data warehouse.
 
 It is designed as a modular, production-friendly ETL pipeline with error handling, logging, environment variables, and clean code structure.
 
-🧱 Project Overview
+## Project Overview
 🔹 Purpose
 
 To create a robust pipeline that:
@@ -35,7 +35,7 @@ Cohort tracking
 
 Payment behavior insights
 
-⚙️ ETL Architecture
+## ETL Architecture
 1️⃣ Extract
 
 The pipeline loads three CSV files:
@@ -117,8 +117,8 @@ Optional schema creation
 
 Structured data warehouse design
 
-🛠️ Core Technologies Used
-
+## Core Technologies Used
+---
 Python 3.10+
 
 pandas
