@@ -1,13 +1,13 @@
 
-# 🧠 Featured Project: BigMart Sales Prediction  
-### 📁 *Case_Study_BigMart_Sales_Prediction*
+# Featured Project: BigMart Sales Prediction  
+### *Case_Study_BigMart_Sales_Prediction*
 
 This project is an end-to-end machine learning solution designed to predict **retail item sales** across multiple BigMart outlets.  
 It follows a complete DS pipeline: data cleaning → feature engineering → modeling → evaluation.
 
 ---
 
-## 📌 **Project Summary**
+## **Project Summary**
 
 Retail companies like BigMart collect detailed transactional data. The challenge is to accurately **predict future product sales**, enabling:
 
@@ -20,7 +20,7 @@ This project uses historical sales data to build a **predictive machine learning
 
 ---
 
-## 📂 **Dataset Overview**
+## **Dataset Overview**
 
 The dataset (from an open Kaggle challenge) contains:
 
@@ -43,7 +43,7 @@ Target variable:
 
 ---
 
-## 🔧 **Technical Workflow**
+##  **Technical Workflow**
 
 ### **1. Data Cleaning**
 ✔ Handled missing values (notably in `Item_Weight` and `Outlet_Size`)  
@@ -87,7 +87,7 @@ The final model achieved:
 
 ---
 
-## 📈 **Results**
+##  **Results**
 
 - Successfully predicted item-level sales with strong accuracy  
 - Identified major factors influencing sales:
@@ -101,7 +101,7 @@ The final model achieved:
 
 ---
 
-## 🛠 **Technologies Used**
+##  **Technologies Used**
 
 - Python  
 - Pandas, NumPy, Scikit-learn  
