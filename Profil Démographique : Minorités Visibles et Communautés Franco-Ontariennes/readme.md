@@ -45,7 +45,7 @@ L’objectif est de fournir un tableau de bord décisionnel moderne, interactif 
 
 ---
 
-### ![**2. Statistiques des Franco-Ontariens**] (https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-24%20072056.png)
+### ![**2. Statistiques des Franco-Ontariens**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-24%20072056.png)
 
 #### Indicateurs clés
 - **13 312 865** – Population totale de l’Ontario  
