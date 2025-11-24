@@ -29,12 +29,6 @@ L’objectif est de fournir un tableau de bord décisionnel moderne, interactif 
 
 ### ![**1. Les Minorités Visibles**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-22%20193943.png)
 
-####  Indicateurs clés
-- **4 040 745** – Total des minorités visibles  
-- **2 079 665** – Femmes des minorités visibles  
-- **1 961 080** – Hommes des minorités visibles  
-- **98 925** – Minorités visibles *francophones*
-
 ####  Visualisations
 - **Immigrants dans la GTA** (Toronto, Mississauga, Brampton, Markham, etc.)  
 - **Hommes immigrants dans la GTA**  
@@ -47,10 +41,6 @@ L’objectif est de fournir un tableau de bord décisionnel moderne, interactif 
 
 ### ![**2. Statistiques des Franco-Ontariens**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-24%20072056.png)
 
-#### Indicateurs clés
-- **13 312 865** – Population totale de l’Ontario  
-- **622 420** – Population francophone de l’Ontario  
-- **330 800** – Femmes francophones  
 
 #### Visualisations détaillées
 - Population totale par région  
@@ -83,20 +73,7 @@ L’objectif est de fournir un tableau de bord décisionnel moderne, interactif 
 - `Taux Immigrants = DIVIDE([Nb Immigrants], [Population Totale])`
 - `Proportion Francophone = DIVIDE([Francophones], [Population Totale])`
 
----
 
-##  Utilisation
-
-1. Ouvrir **Power BI Desktop**.
-2. Charger le fichier `.pbix` du projet.  
-3. Utiliser les filtres pour explorer :  
-   - différences régionales  
-   - évolutions temporelles  
-   - distributions démographiques  
-4. Exporter au besoin :  
-   - PDF  
-   - PowerPoint  
-   - Rapports interactifs Power BI Service  
 
 
 
