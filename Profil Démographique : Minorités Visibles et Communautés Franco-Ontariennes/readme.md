@@ -26,8 +26,9 @@ L’objectif est de fournir un tableau de bord décisionnel moderne, interactif 
 ---
 
 ##  Contenu du Rapport
+**1. Les Minorités Visibles**
 
-### ![**1. Les Minorités Visibles**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-22%20193943.png)
+### ![**1. Les Minorités Visibles**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-24%20072219.png)
 
 ####  Visualisations
 - **Immigrants dans la GTA** (Toronto, Mississauga, Brampton, Markham, etc.)  
@@ -38,8 +39,9 @@ L’objectif est de fournir un tableau de bord décisionnel moderne, interactif 
 - **Francophones des minorités visibles par région** (Centre, Est, Sud-Ouest, Nord-Est, Nord-Ouest)
 
 ---
+**2. Statistiques des Franco-Ontariens**
 
-### ![**2. Statistiques des Franco-Ontariens**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-24%20072056.png)
+### ![**2. Statistiques des Franco-Ontariens**](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique%20%3A%20Minorit%C3%A9s%20Visibles%20et%20Communaut%C3%A9s%20Franco-Ontariennes/Screenshot%202025-11-24%20072240.png)
 
 
 #### Visualisations détaillées
