@@ -17,7 +17,8 @@ The report answers questions such as:
 ---
 
 ## 2. Data & Metrics
-![Data & Metrics]()
+![Data & Metrics](https://github.com/Mamoudou37/Mamoudou37/blob/main/Customer%20Profitability%20Sample/Screenshot%202025-11-24%20072527.png)
+
 ### Main Business Concepts
 
 - **Customer** – end client or account buying our products.
@@ -39,8 +40,9 @@ The report answers questions such as:
 ## 3. Report Pages
 
 ### 3.1 Industry Margin Analysis
-![Industry Margin Analysis]()
-This page focuses on **profitability by industry and product**.
+![Industry Margin Analysis](https://github.com/Mamoudou37/Mamoudou37/blob/main/Customer%20Profitability%20Sample/Screenshot%202025-11-24%20072558.png)
+
+This visualisation focus on **profitability by industry and product**.
 
 Main visuals:
 
@@ -74,7 +76,8 @@ Use this page to **identify profitable / unprofitable industries and products**,
 ---
 
 ### 3.2 Team Scorecard
-![Team Scorecard]()
+![Team Scorecard](https://github.com/Mamoudou37/Mamoudou37/blob/main/Customer%20Profitability%20Sample/image.png)
+
 This page is a **performance dashboard for the sales / account team**.
 
 Main visuals:
@@ -127,19 +130,6 @@ Use this page to **monitor team performance**, track **budget adherence**, and i
   - `Gross Margin % = DIVIDE([Gross Margin], [RevenueTY])`
   - `Revenue Var % to Budget = DIVIDE([RevenueTY] - [Budget Revenue], [Budget Revenue])`
 
-(Names and formulas can be adjusted to match your actual model.)
 
----
 
-## 6. Repository Structure (suggested)
-
-```text
-Customer-Profitability-Sample/
-│
-├─ Customer Profitability Sample.pbix
-├─ data/               # Optional: source CSV/Excel files
-├─ images/
-│   ├─ industry-margin-analysis.png
-│   └─ team-scorecard.png
-└─ README.md
 
