@@ -41,7 +41,7 @@ This dashboard provides comprehensive insights into:
 
 ### **Agencies' Internal Capacities Dashboard**
 
-![Agencies Internal Capacities Dashboard](path/to/image2.png)
+![Agencies Internal Capacities Dashboard](https://github.com/Mamoudou37/Mamoudou37/blob/main/2020-2021%20OZi%20Report/Screenshot%202025-11-24%20091122.png)
 
 This dashboard analyzes the French language proficiency of healthcare staff:
 
