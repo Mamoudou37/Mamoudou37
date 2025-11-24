@@ -11,7 +11,7 @@ Identifying gaps and opportunities for improving accessibility for French-speaki
 Data visualizations in the report include bar charts, summaries, and maps to highlight regional differences and overall trends.
 ---
 
-## 🎯 Key Objectives
+## Key Objectives
 
 The report draws from data across various regions and agencies to address three main themes:
 
@@ -43,7 +43,7 @@ This dashboard analyzes the French language proficiency of healthcare staff:
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 The development and analysis for this report utilized:
 
