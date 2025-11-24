@@ -22,7 +22,7 @@ The report draws from data across various regions and agencies to address three 
 
 ### **Patients & Clients Dashboard**
 
-![Patients & Clients Dashboard](path/to/image1.png)
+![Patients & Clients Dashboard](https://github.com/Mamoudou37/Mamoudou37/blob/main/2020-2021%20OZi%20Report/Screenshot%202025-11-24%20091108.png)
 
 This dashboard provides comprehensive insights into:
 
