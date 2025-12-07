@@ -101,7 +101,7 @@ Version Control • Reproducible Pipelines • Software Best Practices
 
 ---
 
-## Featured Projects
+## Data Science Projects
 
 ### [BigMart Sales Prediction](https://github.com/Mamoudou37/Data-Science-Portfolio/tree/main/BigMart%20Sale%20Prediction)
 **End-to-end ML pipeline predicting retail sales across multiple outlets**
@@ -144,6 +144,62 @@ Designed a modular ETL pipeline extracting, transforming, and loading loan data 
 - **Tech Stack:** Python, Pandas, SQLAlchemy, PostgreSQL, Docker
 - **Architecture:** Star schema with dimension and fact tables
 - **Features:** Error handling, logging, environment variables, transaction-safe bulk inserts
+  
+## Data Analytics Project
+
+### [Customer Profitability Sample](https://github.com/Mamoudou37/Mamoudou37/tree/main/Customer%20Profitability%20Sample)
+
+Customer Profitability Sample is an interactive Power BI dashboard that analyzes revenue, gross margin, budget variance, and sales performance across customers, products, industries, regions, and executives.
+
+## Key Features
+
+- Revenue & Gross Margin % by industry and product
+
+- Budget vs actual performance by month and executive
+
+- Regional and state-level revenue analysis
+
+- Executive performance scorecard
+
+- Interactive filters for deep business insights 
+
+[![Customer Profitability Sample](https://github.com/Mamoudou37/Mamoudou37/blob/main/Customer%20Profitability%20Sample/Screenshot%202025-11-24%20072527.png)](https://github.com/Mamoudou37/REPO-CUSTOMER-PROFITABILITY)
+
+
+---
+
+### [Profil Démographique : Minorités Visibles et Communautés Franco-Ontariennes](https://github.com/Mamoudou37/Mamoudou37/tree/main/Profil%20D%C3%A9mographique)
+
+*Ce projet Power BI présente une analyse complète des minorités visibles dans la région du Grand Toronto (GTA) ainsi que des statistiques démographiques des Franco-Ontariens.
+Il s’agit d’un outil visuel conçu pour soutenir la planification des services en français, la prise de décision stratégique et l’identification des besoins communautaires.*
+
+[![Minorités Visibles & Communautés Franco-Ontariennes](https://github.com/Mamoudou37/Mamoudou37/blob/main/Profil%20D%C3%A9mographique/Screenshot%202025-11-24%20072219.png)](https://github.com/Mamoudou37/Mamoudou37/tree/main/Profil-Demographique)
+
+
+---
+
+### [2020–2021 OZi Report – FLHS System Planning](https://github.com/Mamoudou37/Mamoudou37/tree/main/2020-2021%20OZi%20Report)
+
+The OZi 2020–2021 Report provides a system-wide analysis of capacity, accessibility, and utilization of French Language Health Services across Ontario health regions.
+
+## Key Features
+
+- Clients & visits by agency
+
+- Francophone service utilization by LHIN
+
+- Geographic mapping of FLHS agencies
+
+- Internal capacity assessment of providers
+
+- Integration of FLHS requests & satisfaction surveys
+
+## Value
+Used as an official health system planning tool to guide policy, funding decisions, and service accessibility improvements.
+
+[![2020–2021 OZi Report](https://github.com/Mamoudou37/Mamoudou37/blob/main/2020-2021%20OZi%20Report/Screenshot%202025-11-24%20091108.png)](https://github.com/Mamoudou37/REPO-OZI-2020-2021)
+
+
 
 ---
 
@@ -169,8 +225,6 @@ Designed a modular ETL pipeline extracting, transforming, and loading loan data 
 ---
 
 ## Let's Connect
-
-I'm actively seeking data science opportunities in **healthcare**, **government**, and **manufacturing** sectors where I can apply my skills to drive meaningful impact.
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mamoudou-ndao)
 [![Email](https://img.shields.io/badge/-Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:ndao.mamoud@gmail.com)
